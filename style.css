@@ -1,0 +1,117 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #6c63ff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Sections principales */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none; /* on enleve la visibiliter de cree un compte au debut*/
+}
+
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #574dcf;
+}
+
+a {
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Liste des jeux */
+.game-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-list li {
+    margin: 10px 0;
+}
+
+.game-list a {
+    text-decoration: none;
+    color: #6c63ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-list a:hover {
+    text-decoration: underline;
+}
+
+.game-list .disabled {
+    color: #999;
+    pointer-events: none;
+    cursor: default;
+}
