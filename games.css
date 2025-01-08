@@ -1,0 +1,172 @@
+/* Style général */
+html, body {
+    overflow: hidden; /* Désactive le défilement global */
+    height: 100%; /* Assure que tout le contenu reste dans la fenêtre */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    
+
+    background: url('img/fond.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Fond d'écran fixe */
+    
+    scrollbar-width: none; /* Pour Firefox */
+    overflow-y: scroll; /* Assure que le défilement est fonctionnel */
+}
+    
+body::-webkit-scrollbar {
+        display: none; /* Pour Chrome, Safari, Edge */
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-center ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-center ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-center ul li a:hover {
+    color: #f39c12;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 10px; /* Augmente l'espace intérieur pour un confort visuel */
+    border-radius: 20px; /* Arrondit les bords */
+    border: 1px solid #ccc; /* Ajoute une bordure légère */
+    width: 300px; /* Allonge la barre de recherche */
+    transition: box-shadow 0.3s, border-color 0.3s; /* Ajoute des animations pour interactions */
+}
+
+.search-bar:focus {
+    border-color: #bb0000; /* Change la couleur de la bordure au focus */
+    box-shadow: 0 0 5px #bb0000; /* Ajoute une ombre lumineuse */
+    outline: none; /* Supprime l'effet de focus par défaut */
+}
+
+.connect-btn {
+    background-color: #bb0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 20px; /* Arrondit les bords */
+    font-size: 20px;
+}
+
+.connect-btn:hover {
+    background-color: #eb0000;
+}
+
+/* Grille des jeux */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+
+.games-container a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.games-container img {
+    width: 100%; /* Image responsive */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s; /* Ajoute une transition fluide */
+    object-fit: cover;
+    opacity: 0.9; /* Applique 50% de transparence */
+}
+
+.games-container img:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    opacity: 1; /* Opacité complète au survol */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #bb0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: #eb0000;
+}
